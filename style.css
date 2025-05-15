@@ -60,6 +60,7 @@ img {
     height: 100vh;
     #top {
         height: calc(100% - 70px);
+        overflow: hidden;
         #sidebar {
             width: 230px;
             background-color: var(--ws-dark-primary);
@@ -164,6 +165,7 @@ img {
         main {
             width: calc(100% - 230px);
             background-color: var(--ws-dark-main);
+            overflow-y: auto;
             #choices {
                 ul {
                     list-style: none;
@@ -276,6 +278,53 @@ img {
                     }
                 }
             }
+            #popular {
+                padding: 1.5rem 1rem;
+                h3 {
+                    color: var(--ws-light-primary);
+                }
+                span {
+                    display: inline-block;
+                    color: var(--ws-main-text-darker);
+                    font-size: 11px;
+                    padding: 1rem 0 1.5rem 0;
+                }
+                .row {
+                    .col-2 {
+                        .card {
+                            padding-right: .75rem;
+                            text-align: center;
+                            .cover {
+                                border-radius: 50%;
+                                overflow: hidden;
+                                position: relative;
+                                .play {
+                                    display: none;
+                                    max-width: 50%;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    text-align: center;
+                                    i {
+                                        font-size: 50px;
+                                        color: var(--ws-light-primary);
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .play {
+                                    display: block;
+                                }
+                            }
+                            h5 {
+                                color: var(--ws-light-primary);
+                                padding-top: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -292,6 +341,9 @@ img {
 /* Mobile Mode - XS (<576px) */
 
 @media screen and (max-width: 575px) {
+    .col-s-6 {
+        width: calc(100% / 12 * 6);
+    }
     #wrapper {
         #top {
             #sidebar {
@@ -325,22 +377,25 @@ img {
                         display: none;
                     }
                 }
+                #sidebar-bottom {
+                    text-align: center;
+                    #app-install {
+                        span {
+                            display: none;
+                        }
+                    }
+                    hr {
+                        display: none;
+                    }
+                    #account {
+                        strong {
+                            display: none;
+                        }
+                    }
+                }
             }
-            #sidebar-bottom {
-                text-align: center;
-                #app-install {
-                    span {
-                        display: none;
-                    }
-                }
-                hr {
-                    display: none;
-                }
-                #account {
-                    strong {
-                        display: none;
-                    }
-                }
+            main {
+                width: calc(100% - 50px);
             }
         }
     }
@@ -354,8 +409,10 @@ img {
 
 /* Tablet Mode - MD (>768px) */
 
-@media screen and (min-width: 768px) {
-    
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .col-md-3 {
+        width: calc(100% / 12 * 3);
+    }
 }
 
 /* #endregion Responsive*/
