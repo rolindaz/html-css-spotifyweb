@@ -75,11 +75,14 @@ img {
                 #logo {
                     width: 70%;
                     padding: 1rem;
+                    #small-logo {
+                        display: none;
+                    }
                 }
                 #menu {
                     ul {
                         list-style: none;
-                        line-height: 1.5rem;
+                        line-height: 1.75rem;
                         li {
                             border-left: 1px solid transparent;
                             padding-left: 1rem;
@@ -178,7 +181,58 @@ img {
 /* Mobile Mode - XS (<576px) */
 
 @media screen and (max-width: 575px) {
-    
+    #wrapper {
+        #top {
+            #sidebar {
+                width: 50px;
+                #sidebar-top {
+                    #logo {
+                        width: 100%;
+                        padding: .75rem;
+                        #normal-logo {
+                            display: none;
+                        }
+                        #small-logo {
+                            display: inline-block;
+                        }
+                    }
+                    #menu {
+                        ul {
+                            li {
+                                padding-left: .5rem;
+                                img {
+                                    width: 26px;
+                                    height: 26px;
+                                }
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    #playlist {
+                        display: none;
+                    }
+                }
+            }
+            #sidebar-bottom {
+                text-align: center;
+                #app-install {
+                    span {
+                        display: none;
+                    }
+                }
+                hr {
+                    display: none;
+                }
+                #account {
+                    strong {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Large Mobile Mode - S (>576px) */
