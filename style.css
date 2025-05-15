@@ -338,6 +338,22 @@ img {
 
 /* #region Responsive */
 
+/* Tablet Mode - MD (>768px) */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .col-md-3 {
+        width: calc(100% / 12 * 3);
+    }
+}
+
+/* Large Mobile Mode - S (>576px) */
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .col-s-6 {
+        width: calc(100% / 12 * 6);
+    }
+}
+
 /* Mobile Mode - XS (<576px) */
 
 @media screen and (max-width: 575px) {
@@ -398,20 +414,6 @@ img {
                 width: calc(100% - 50px);
             }
         }
-    }
-}
-
-/* Large Mobile Mode - S (>576px) */
-
-@media screen and (min-width: 576px) {
-    
-}
-
-/* Tablet Mode - MD (>768px) */
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .col-md-3 {
-        width: calc(100% / 12 * 3);
     }
 }
 
