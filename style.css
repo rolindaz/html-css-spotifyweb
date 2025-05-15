@@ -58,10 +58,8 @@ img {
 
 #wrapper {
     height: 100vh;
-    overflow: hidden;
     #top {
         height: calc(100% - 70px);
-        overflow-y: auto;
         #sidebar {
             width: 230px;
             background-color: var(--ws-dark-primary);
@@ -228,6 +226,51 @@ img {
                                 color: var(--ws-main-text-darker);
                                 font-size: 11px;
                                 padding-top: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            #for-you {
+                padding: 1.5rem 1rem;
+                h3 {
+                    color: var(--ws-light-primary);
+                }
+                span {
+                    display: inline-block;
+                    color: var(--ws-main-text-darker);
+                    font-size: 11px;
+                    padding: 1rem 0 2rem 0;
+                }
+                .row {
+                    .col-2 {
+                        .card {
+                            padding-right: .75rem;
+                            text-align: center;
+                            .cover {
+                                position: relative;
+                                .play {
+                                    display: none;
+                                    max-width: 50%;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    text-align: center;
+                                    i {
+                                        font-size: 50px;
+                                        color: var(--ws-light-primary);
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .play {
+                                    display: block;
+                                }
+                            }
+                            h5 {
+                                color: var(--ws-light-primary);
+                                padding-top: 1rem;
                             }
                         }
                     }
