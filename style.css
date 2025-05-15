@@ -171,6 +171,7 @@ img {
                     list-style: none;
                     text-transform: uppercase;
                     font-size: 13px;
+                    flex-wrap: wrap;
                     gap: 1rem;
                     justify-content: center;
                     li {
@@ -182,6 +183,39 @@ img {
                         }
                         &:hover {
                             color: var(--ws-light-primary);
+                        }
+                    }
+                }
+            }
+            #recent {
+                padding: 1.5rem 1rem;
+                h3 {
+                    color: var(--ws-light-primary);
+                    padding: 1rem 0;
+                }
+                .row {
+                    .col-2 {
+                        .card {
+                            padding-right: .75rem;
+                            .cover {
+                                position: relative;
+                            }
+                            #play {
+                                width: 50%;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                i {
+                                    font-size: 50px;
+                                    color: var(--ws-light-primary);
+                                }
+                            }
+                            &:hover {
+                                #play {
+                                    display: block;
+                                }
+                            }
                         }
                     }
                 }
