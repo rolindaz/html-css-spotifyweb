@@ -425,6 +425,24 @@ img {
                 }
             }
         }
+        #right {
+            gap: .25rem;
+            align-items: center;
+            color: var(--ws-player-icons-lighter);
+            font-size: 12px;
+            i {
+                padding: 0 .25rem;
+            }
+            >div {
+                display: inline-block;
+                width: 85px;
+                height: 3px;
+                border: none;
+                border-radius: 20px;
+                background-color: var(--ws-player-bars-base);
+                border-left: 20px solid var(--ws-player-bars-top);
+            }
+        }
     }
 }
 
