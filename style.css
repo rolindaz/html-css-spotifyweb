@@ -52,12 +52,25 @@ img {
 }
 
 .bar {
+    position: relative;
     display: inline-block;
     height: 3px;
     border: none;
     border-radius: 20px;
     background-color: var(--ws-player-bars-base);
     border-left: solid var(--ws-player-bars-top);
+}
+
+.tracker {
+    display: none;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--ws-light-primary);
+    border-radius: 50%;
+    border: none;
+    left: 0;
+    bottom: -5px;
 }
 
 /* #endregion Utilities */
@@ -422,6 +435,10 @@ img {
                     h6 {
                         font-size: 8px;
                         color: var(--ws-player-icons-darker);
+                        &:hover {
+                            color: var(--ws-player-icons-lighter);
+                            text-decoration: underline;
+                        }
                     }
                 }
                 #track-icons {
@@ -430,6 +447,9 @@ img {
                     color: var(--ws-player-icons-darker);
                     i {
                         padding: 0 .25rem;
+                        &:hover {
+                            color: var(--ws-player-icons-lighter);
+                        }
                     }
                 }
             }
@@ -445,6 +465,9 @@ img {
                 align-items: center;
                 i:nth-child(3) {
                     font-size: 30px;
+                    &:hover {
+                        scale: 1.1;
+                    }
                 }
             }
             #player-bar {
@@ -457,6 +480,13 @@ img {
                 .bar {
                     width: 430px;
                     border-left-width: 85px;
+                    &:hover {
+                        border-left-color: var(--ws-highlight);
+                        cursor: pointer;
+                        .tracker {
+                            display: inline-block;
+                        }
+                    }
                 }
             }
         }
@@ -471,6 +501,13 @@ img {
             .bar {
                 width: 85px;
                 border-left-width: 20px;
+                &:hover {
+                    border-left-color: var(--ws-highlight);
+                    cursor: pointer;
+                    .tracker {
+                        display: inline-block;
+                    }
+                }
             }
         }
     }
