@@ -15,6 +15,7 @@
     --ws-bright-main: #4074A8;
     --ws-bg-dark-hero: #2A2A2A;
     --ws-dark-main: #121212;
+    --ws-darker-icon: #939393;
     --ws-highlight: #65d46e;
     --ws-light-primary: white;
 
@@ -190,6 +191,56 @@ main {
             text-align: center;
             flex-direction: column;
             gap: .5rem;
+            .table {
+                padding: 0 2rem;
+                table {
+                    border-spacing: 0 1rem;
+                    tr {
+                        border-bottom: 1px solid var(--ws-light-primary);
+                    }
+                    text-align: start;
+                    thead {
+                        tr {
+                            line-height: 1.5rem;
+                            th {
+                                text-align: start;
+                            }
+                            th:first-child {
+                                width: 40%;
+                            }
+                            .d-flex {
+                                align-items: flex-start;
+                                text-align: start;
+                                gap: .3rem;
+                                img {
+                                    width: 40%;
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                .fa-minus {
+                                    color: var(--ws-darker-icon);
+                                    font-size: 28px;
+                                }
+                                .fa-circle-check {
+                                    font-size: 28px;
+                                }
+                            }
+                            td:first-child {
+                                font-size: 14px;
+                                text-decoration: underline dashed 1px var(--ws-light-primary);
+                            }
+                            td:nth-child(2),
+                            td:nth-child(3) {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
