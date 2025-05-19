@@ -19,6 +19,8 @@
     --ws-card-hr: #3c3c3c;
     --ws-first-card: #F8D4D6;
     --ws-second-card: #C1B2D0;
+    --ws-third-card: #F5CA72;
+    --ws-fourth-card: #A9B9CF;
     --ws-dark-main: #121212;
     --ws-darker-icon: #939393;
     --ws-highlight: #65d46e;
@@ -100,6 +102,7 @@ img {
         font-weight: 800;
     }
     hr {
+        display: block;
         margin: 0 auto;
         height: 0;
         border: .5px solid var(--ws-card-hr);
@@ -128,6 +131,12 @@ img {
             color: var(--ws-lighter-text-card);
         }
     }
+    strong:last-of-type {
+        color: var(--ws-light-primary);
+    }
+    >span {
+        color: var(--ws-lighter-text-card);
+    }
     &.single-user {
         text-align: left;
         strong:first-of-type {
@@ -144,6 +153,17 @@ img {
             display: block;
             font-size: 13px;
             padding: .25rem 0 1.5rem;
+        }
+    }
+    &.multiple-users {
+        .d-flex {
+            padding: 0 0 1rem 0;
+        }
+        h2 {
+            padding-bottom: 1rem;
+        }
+        hr {
+            margin: 2rem auto 0;
         }
     }
 }
@@ -392,12 +412,6 @@ main {
                         padding: 1rem 0;
                         color: var(--ws-first-card);
                     }
-                    strong:last-of-type {
-                        color: var(--ws-light-primary);
-                    }
-                    >span {
-                        color: var(--ws-lighter-text-card);
-                    }
                 }
                 #student {
                     strong:first-child,
@@ -407,13 +421,22 @@ main {
                     h2 {
                         color: var(--ws-second-card);
                     }
-                    strong:last-of-type {
-                        color: var(--ws-light-primary);
+                }
+                #duo {
+                    .btn {
+                        background-color: var(--ws-third-card);
                     }
-                    >span {
-                        color: var(--ws-lighter-text-card);
+                    h2 {
+                        color: var(--ws-third-card);
                     }
-                    
+                }
+                #family {
+                    .btn {
+                        background-color: var(--ws-fourth-card);
+                    }
+                    h2 {
+                        color: var(--ws-fourth-card);
+                    }
                 }
             }
         }
