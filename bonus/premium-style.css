@@ -185,6 +185,7 @@ main {
         }
     }
     #comparisons {
+        margin-bottom: 2rem;
         .container {
             padding: 1rem .5rem;
             color: var(--ws-light-primary);
@@ -193,23 +194,28 @@ main {
             gap: .5rem;
             .table {
                 padding: 0 2rem;
+                margin: 0 auto;
+                max-width: 500px;
                 table {
                     border-spacing: 0 1rem;
-                    tr {
-                        border-bottom: 1px solid var(--ws-light-primary);
-                    }
                     text-align: start;
                     thead {
                         tr {
                             line-height: 1.5rem;
                             th {
-                                text-align: start;
+                                height: 130px;
+                                border-bottom: 1px solid var(--ws-light-primary);
                             }
                             th:first-child {
                                 width: 40%;
+                                text-indent: .5rem;
+                            }
+                            th:nth-child(2) {
+                                
                             }
                             .d-flex {
-                                align-items: flex-start;
+                                padding-top: 2.5rem;
+                                align-items: start;
                                 text-align: start;
                                 gap: .3rem;
                                 img {
@@ -221,6 +227,8 @@ main {
                     tbody {
                         tr {
                             td {
+                                height: 70px;
+                                border-bottom: 1px solid var(--ws-light-primary);
                                 .fa-minus {
                                     color: var(--ws-darker-icon);
                                     font-size: 28px;
@@ -230,6 +238,7 @@ main {
                                 }
                             }
                             td:first-child {
+                                text-indent: .5rem;
                                 font-size: 14px;
                                 text-decoration: underline dashed 1px var(--ws-light-primary);
                             }
@@ -237,6 +246,58 @@ main {
                             td:nth-child(3) {
                                 text-align: center;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #plans {
+        .container {
+            padding: 0 .5rem;
+            color: var(--ws-light-primary);
+            text-align: center;
+            flex-direction: column;
+            gap: 1rem;
+            #payment {
+                width: 60%;
+                margin: 1rem auto 2rem;
+                ul {
+                    list-style: none;
+                    gap: .5rem;
+                    li {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--ws-light-primary);
+                        border-radius: 8px;
+                        padding: .25rem;
+                        height: 40px;
+                    }
+                }
+            }
+            #included {
+                padding: 0 1rem;
+                margin: 0 auto;
+                align-items: center;
+                div:first-child {
+                    h3 {
+                        font-size: 22px;
+                    }
+                    flex-basis: 60%;
+                }
+                div:last-child {
+                    line-height: 1.5rem;
+                    padding: 0 3rem;
+                    margin-left: 1rem;
+                    ul {
+                        list-style-type: "\2713";
+                        list-style-position: outside;
+                        text-align: start;
+                        font-size: 15px;
+                        font-weight: 500;
+                        li {
+                            padding-left: 10px;
                         }
                     }
                 }
