@@ -232,6 +232,10 @@ img {
                         scale: 1.05;
                         cursor: pointer;
                     }
+                    a {
+                        color: var(--ws-light-primary);
+                        text-decoration: none;
+                    }
                 }
             }
             #choices {

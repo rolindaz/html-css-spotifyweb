@@ -1,0 +1,115 @@
+.debug * {
+    border: 1px dashed red;
+}
+
+/* #region General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ws-dark-primary: black;
+    --ws-bright-main: #4074A8;
+    --ws-dark-main: #121212;
+    --ws-highlight: #65d46e;
+    --ws-light-primary: white;
+
+    --ws-font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html, body {
+    font-family: var(--ws-font-family);
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* #endregion General */
+
+/* #region Utilities */
+
+.d-flex {
+    display: flex;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* #endregion Utilities */
+
+/* #region Header */
+
+header {
+    align-items: center;
+    background-color: var(--ws-dark-primary);
+    height: 10vh;
+    .container {
+        height: 80%;
+        justify-content: space-between;
+        align-items: center;
+        #logo {
+            height: 100%;
+            width: 30%;
+        }
+        nav {
+            display: none;
+            ul {
+                list-style: none;
+                li {
+                    padding: 1rem;
+                }
+                a {
+                    color: var(--ws-light-primary);
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+        }
+        #menu {
+            height: 100%;
+            color: var(--ws-light-primary);
+            width: 10%;
+            i {
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+
+/* #region Responsive */
+
+/* Tablet Mode - MD (>768px) */
+
+@media screen and (min-width: 768px) {
+    .col-md-3 {
+        width: calc(100% / 12 * 3);
+    }
+}
+
+/* Desktop Mode - LG (>1440px) */
+
+@media screen and (min-width: 1440px) {
+    header {
+        .container {
+            #menu {
+                display: none;
+            }
+            nav {
+                display: inline-block;
+            }
+        }
+    }
+    
+}
+
+/* #endregion Responsive*/
+
