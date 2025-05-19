@@ -124,6 +124,7 @@ img {
                             }
                             &:hover {
                                 color: var(--ws-light-primary);
+                                cursor: pointer;
                             }
                         }
                     }
@@ -158,12 +159,14 @@ img {
                             #plus-square {
                                 background-color: var(--ws-light-primary);
                             }
+                            cursor: pointer;
                         }
                     }
                     span  {
                         &:hover {
                             color: var(--ws-light-primary);
                         }
+                        cursor: pointer;
                     }
                 }
             }
@@ -176,6 +179,7 @@ img {
                     font-size: 11px;
                     &:hover {
                         color: var(--ws-light-primary);
+                        cursor: pointer;
                     }
                 }
                 hr {
@@ -226,6 +230,7 @@ img {
                     border-radius: 20px;
                     &:hover {
                         scale: 1.05;
+                        cursor: pointer;
                     }
                 }
             }
@@ -258,6 +263,7 @@ img {
                         }
                         &:hover {
                             color: var(--ws-light-primary);
+                            cursor: pointer;
                         }
                     }
                 }
@@ -296,6 +302,7 @@ img {
                                 img {
                                     filter: brightness(50%);
                                 }
+                                cursor: pointer;
                             }
                             h5 {
                                 color: var(--ws-light-primary);
@@ -352,6 +359,7 @@ img {
                                 img {
                                     filter: brightness(50%);
                                 }
+                                cursor: pointer;
                             }
                             h5 {
                                 color: var(--ws-light-primary);
@@ -403,6 +411,7 @@ img {
                                 img {
                                     filter: brightness(50%);
                                 }
+                                cursor: pointer;
                             }
                             h5 {
                                 color: var(--ws-light-primary);
@@ -442,6 +451,7 @@ img {
                         &:hover {
                             color: var(--ws-player-icons-lighter);
                             text-decoration: underline;
+                            cursor: pointer;
                         }
                     }
                 }
@@ -453,6 +463,7 @@ img {
                         padding: 0 .25rem;
                         &:hover {
                             color: var(--ws-player-icons-lighter);
+                            cursor: pointer;
                         }
                     }
                 }
@@ -476,6 +487,7 @@ img {
                     font-size: 30px;
                     &:hover {
                         scale: 1.1;
+                        cursor: pointer;
                     }
                 }
             }
