@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="./premium-style.css">
     <title>Spotify Premium (IT) - Inizia</title>
@@ -53,36 +58,47 @@
         </div>
     </header>
     <main>
-        <hero>
-            <h1>
-                Offerta in scadenza: 0,00 € per 3 mesi di Premium Individual
-            </h1>
-            <p>
-                Non perderti musica senza pubblicità, riproduzione in modalità offline e molto altro ancora. Annulla quando vuoi.
-            </p>
-            <span>
-                <i class="fa-solid fa-bell"></i>
-                L'offerta termina oggi
-            </span>
-            <div id="actions">
-                <button>
-                    <a href="#">
-                        Inizia
-                    </a>
-                </button>
-                <button>
-                    <a href="#">
-                       Visualizza tutti i piani 
-                    </a>
-                </button>
+        <div id="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 d-flex">
+                        <h1>
+                            Offerta in scadenza: 0,00 € per 3 mesi di Premium Individual
+                        </h1>
+                        <p>
+                            Non perderti musica senza pubblicità, riproduzione in modalità offline e molto altro ancora. Annulla quando vuoi.
+                        </p>
+                        <span>
+                            <i class="fa-solid fa-bell"></i>
+                            L'offerta termina oggi
+                        </span>
+                        <div id="actions" class="d-flex">
+                            <button class="btn">
+                                <a href="#">
+                                    Inizia
+                                </a>
+                            </button>
+                            <button class="btn">
+                                <a href="#">
+                                Visualizza tutti i piani 
+                                </a>
+                            </button>
+                        </div>
+                        <p>
+                            Solo per Premium Individual. 0 € per 3 mesi, poi 10,99 € al mese. Offerta disponibile solo se non hai ancora provato Premium.
+                            <a href="#">
+                                Si applicano termini e condizioni.
+                            </a>
+                            <br>
+                            L'offerta termina il giorno 19 maggio 2025.
+                        </p>   
+                    </div>
+                    <div class="col-md-6 d-flex">
+                        <img src="https://i.scdn.co/image/ab678e040000ed3af0334f2ca73dddf8595f4921" alt="Music Design">
+                    </div>
+                </div>
+                
             </div>
-            <p>
-                Solo per Premium Individual. 0 € per 3 mesi, poi 10,99 € al mese. Offerta disponibile solo se non hai ancora provato Premium.
-                <a href="#">
-                    Si applicano termini e condizioni.
-                </a>
-                L'offerta termina il giorno 19 maggio 2025.
-            </p>
         </hero>
     </main>
 </body>

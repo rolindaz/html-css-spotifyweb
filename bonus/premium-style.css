@@ -13,6 +13,7 @@
 :root {
     --ws-dark-primary: black;
     --ws-bright-main: #4074A8;
+    --ws-bg-dark-hero: #2A2A2A;
     --ws-dark-main: #121212;
     --ws-highlight: #65d46e;
     --ws-light-primary: white;
@@ -22,6 +23,13 @@
 
 html, body {
     font-family: var(--ws-font-family);
+}
+
+body {
+    position: relative;
+    background-image: url(https://i.scdn.co/image/ab678e040000ed3af0334f2ca73dddf8595f4921);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 img {
@@ -38,8 +46,31 @@ img {
 }
 
 .container {
-    width: 80%;
+    width: 96%;
     margin: 0 auto;
+    max-width: 1150px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    border-radius: 28px;
+    border: 1px solid transparent;
+    a {
+        font-size: 16px;
+        color: var(--ws-light-primary);
+        text-decoration: none;
+        font-weight: bold;
+    }
 }
 
 /* #endregion Utilities */
@@ -49,14 +80,15 @@ img {
 header {
     align-items: center;
     background-color: var(--ws-dark-primary);
-    height: 10vh;
+    height: 50px;
     .container {
         height: 80%;
         justify-content: space-between;
         align-items: center;
         #logo {
             height: 100%;
-            width: 30%;
+            width: 18%;
+            max-width: 120px;
         }
         nav {
             display: none;
@@ -75,14 +107,84 @@ header {
         #menu {
             height: 100%;
             color: var(--ws-light-primary);
-            width: 10%;
+            align-items: center;
             i {
-                height: 100%;
+                font-size: 23px;
                 display: block;
             }
         }
     }
 }
+
+/* #endregion Header */
+
+/* #region Main */
+
+main {
+    position: absolute;
+    background-color: var(--ws-dark-main);
+    #hero {
+        .container {
+            .row {
+                .col-md-6:first-child {
+                    flex-direction: column;
+                    gap: 1rem;
+                    color: var(--ws-light-primary);
+                    h1 {
+                        line-height: 2rem;
+                        padding-top: 350px;
+                    }
+                    >span {
+                        display: inline-block;
+                        padding: .25rem;
+                        align-self: flex-start;
+                        background-color: var(--ws-bg-dark-hero);
+                        font-weight: 400;
+                        i {
+                            font-size: 20px;
+                            margin-right: .25rem;
+                            color: var(--ws-bright-main);
+                        }
+                    }
+                    p:first-of-type {
+                        font-size: 15px;
+                    }
+                    #actions {
+                        margin: 1rem 0;
+                        gap: 1rem;
+                        .btn:first-child {
+                            background-color: var(--ws-bright-main);
+                        }
+                        .btn:last-child {
+                            background-color: var(--ws-dark-primary);
+                            border-color: var(--ws-light-primary);
+                        }
+                    }
+                    p:last-of-type {
+                        font-size: 10.5px;
+                        font-weight: bold;
+                        a {
+                            color: var(--ws-light-primary);
+                        }
+                    }
+                }
+                .col-md-6:last-child {
+                    display: none;
+                    justify-content: flex-end;
+                    align-items: center;
+                    img {
+                        width: 70%;
+                        padding: 0 .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* #endregion Main */
+
 
 
 /* #region Responsive */
@@ -90,8 +192,22 @@ header {
 /* Tablet Mode - MD (>768px) */
 
 @media screen and (min-width: 768px) {
-    .col-md-3 {
-        width: calc(100% / 12 * 3);
+    .col-md-6 {
+        width: calc(100% / 12 * 6);
+    }
+    body {
+        background-image: linear-gradient(var(--ws-bright-main), var(--ws-dark-main));
+        main {
+            #hero {
+                .container {
+                    .row {
+                        .col-md-6:last-child {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -99,6 +215,7 @@ header {
 
 @media screen and (min-width: 1440px) {
     header {
+        height: 70px;
         .container {
             #menu {
                 display: none;
